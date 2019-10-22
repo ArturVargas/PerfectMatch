@@ -157,7 +157,7 @@ const investors = [
   },
   {
     name:"Lenna",
-    industry:"any"
+    industry:"bio"
   },
   {
     name:"JamesON",

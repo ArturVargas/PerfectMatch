@@ -1,19 +1,5 @@
-// const {Observable} = require('rxjs');
+
 // const csvToJson = require('csvtojson');
-// //const fs = require('fs');
-// const startupsFile = './yn-coding/startups.csv';
-// let startupsList = [];
-
-// const convertFile = new Observable(subscriber => {
-//   csvToJson().fromFile(startupsFile)
-//   .then((json) => {
-//     subscriber.complete(json);
-//   })
-// }) 
-
-// convertFile.subscribe((data) => {
-//   console.log(data);
-// })
 
 const { startups, investors } = require('./data');
 let startupsList = startups.slice();
@@ -34,6 +20,7 @@ const match = () => {
     investor.startups = investorsMatch;
     result.push(investor);
   });
+  console.log(investors[0], investors[2]);
   return result;
 }
 
