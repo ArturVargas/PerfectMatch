@@ -7,8 +7,7 @@ const matchStartups = async () => {
   const startups = await csv().fromFile('./yn-coding/startups.csv');
   const investors = await csv().fromFile('./yn-coding/investors.csv');
   let startupsList = startups.slice();
-  let investorsList = investors.slice();
-  //console.log(process(investorsList, startupsList)); 
+  let investorsList = investors.slice(); 
   process(investorsList, startupsList)
 }
 
