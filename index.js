@@ -8,8 +8,10 @@ const matchStartups = async () => {
   const investors = await csv().fromFile('./yn-coding/investors.csv');
   let startupsList = startups.slice();
   let investorsList = investors.slice();
-  process(investorsList, startupsList);  
+  //console.log(process(investorsList, startupsList)); 
+  process(investorsList, startupsList)
 }
+
 
 function process(investorsList, startupsList) {
   let investorsMatch = [];
@@ -28,11 +30,7 @@ function process(investorsList, startupsList) {
     investorsList[i].startups = investorsMatch;
     investorsMatch = [];
   }
-
-  if(startupsList.length > 0){
-    console.log("Startups ",startupsList.length);
-    process(investorsList, startupsList)
-  }
+  console.log(investorsList);
   return investorsList;
 }
 
